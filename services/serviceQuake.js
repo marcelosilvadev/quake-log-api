@@ -3,11 +3,11 @@ module.exports = {
 
     getAllGames: () => logParseService.getFile(),
 
-    getSingleGame: (game) =>{
+    getSingleGame: (game) => {
         return new Promise((resolve, reject) => {
             logParseService.getFile().then(data => {
                 let codGame = `game_${game}`;
-                if(data[codGame]!= null){
+                if (data[codGame] != null) {
                     return resolve(data[codGame]);
                 }
                 return reject({
@@ -15,9 +15,9 @@ module.exports = {
                     statusCode: 404
                 });
             })
-            .catch(err => {
-                return reject(err);
-            })
+                .catch(err => {
+                    return reject(err);
+                })
         })
     }
 }

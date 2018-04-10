@@ -15,7 +15,7 @@ consign()
     .include('controllers')
     .into(app);
 
-app.listen( webconfig.portApi, () => {
+app.listen(webconfig.portApi, () => {
     console.log(`Servidor Online: ${webconfig.urlApi}:${webconfig.portApi}`);
 });
 

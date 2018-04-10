@@ -47,3 +47,8 @@ Após clonar o repositório, utilize o comando via terminal
 Utilizando o comando `node app` ou `npm start` se estiver com o nodemon instalado,  a aplicação rodará em: 
 `http://localhost:3000/`
 Observação: Configurações setadas no arquivo webconfig.js como URL, PORT e VERSION.    
+
+# Testes Unitários
+Para a realização dos testes unitários, foi necessário a instalação no Mocha. Caso o Mocha não seja instalado
+executando o comando npm install, basta utilizar o comando npm install -g mocha.
+Após a instalação do Mocha, execute o comando npm test.

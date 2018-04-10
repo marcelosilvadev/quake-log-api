@@ -5,7 +5,7 @@ module.exports = {
     getFile: () => {
         return new Promise((resolve, reject) => {
             readFile('game.log').then(response => {
-                let file = parsedFile(response);  
+                let file = parsedFile(response);
                 return resolve(file);
             }).catch(err => {
                 return reject(err);
@@ -20,9 +20,11 @@ module.exports = {
     },
     getPlayer: (round, line) => {
         return instancePlayers(round, line);
+    },
+    readFile: (filename) => {
+        return readFile(filename);
     }
 }
-
 /* 
     Reads game.log file 
 */
@@ -56,8 +58,8 @@ function parsedFile(lines) {
         if (line.indexOf('killed') !== -1) {
             kill(root[`game_${rounds}`], line);
         }
-        
-        if (line.indexOf('ClientUserinfoChanged') !== -1){
+
+        if (line.indexOf('ClientUserinfoChanged') !== -1) {
             instancePlayers(root[`game_${rounds}`], line);
         }
     });
@@ -104,8 +106,8 @@ function getKills(kills, line) {
     }
 }
 
-function instanceKills(kills, playername){
-    if(kills[playername] == null){
+function instanceKills(kills, playername) {
+    if (kills[playername] == null) {
         kills[playername] = 0;
     }
 }
