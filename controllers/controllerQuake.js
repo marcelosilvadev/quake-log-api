@@ -1,7 +1,7 @@
 /*
     API call
 */
-var webConfig = require('../webconfig');
+var webConfig = require('../config');
 var serviceQuake = require('../services/serviceQuake');
 module.exports = (app) => {
 

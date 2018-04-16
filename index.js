@@ -3,7 +3,7 @@ const consign = require('consign');
 const cors = require('cors');
 const morgan = require('morgan');
 
-var webconfig = require('./webconfig.js');
+var webconfig = require('./config.js');
 
 var app = express();
 
